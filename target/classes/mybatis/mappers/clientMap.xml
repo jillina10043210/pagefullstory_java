@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.clientMap">
+	
+	
+	<select id="checkId" resultType="int" parameterType="map">
+		SELECT Count(*) from alt.accounts where name = #{reqId}		
+	</select>
+	<select id="checkPwd" resultType="int" parameterType="map">
+		SELECT Count(*) from alt.accounts where name = #{reqId} and password= #{reqPwd}	
+	</select>
+	<insert id="signUp" parameterType="map">
+		INSERT INTO alt.accounts(name, password) VALUES(#{reqId},#{reqPwd})
+	</insert>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>
