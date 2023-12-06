@@ -1,0 +1,65 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    
+}
+#error{
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 850px;
+    aspect-ratio: 798/672;
+    background-image: url('./cont/error.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+#error>#error_button{
+    position: absolute;
+    aspect-ratio: 168/49;
+    width: 30%;
+    left:35%;
+    bottom:2%;
+    background-image: url('./cont/error_button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor:url('./cont/cursorX.png'),none;
+}
+
+#globalLoad{
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1024px;
+    aspect-ratio: 1024/768;    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('./back/loadBack.png');
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#globalLoad>#globalLoad_context{
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 400px;
+    aspect-ratio: 282/144;    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('./cont/loadGif.gif');
+}

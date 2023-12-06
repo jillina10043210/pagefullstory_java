@@ -6,7 +6,7 @@
 	<typeAliases>
 		
 		<typeAlias type="com.ajar.pagefullstory.client.ClientVO" alias="clientVO" />
-	
+		<typeAlias type="com.ajar.pagefullstory.game.GameVO" alias="gameVO" />
 	</typeAliases>
 	
 </configuration>

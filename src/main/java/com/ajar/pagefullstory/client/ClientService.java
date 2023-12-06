@@ -40,4 +40,10 @@ public class ClientService {
 		
 	}
 
+
+	public String goodbye(String reqName) {
+		return cdao.goodbye(reqName);
+		
+	}
+
 }

@@ -24,7 +24,9 @@
 	<insert id="postPlayer" parameterType="clientVO">
 		INSERT INTO alt.players (name, p_name, p_str, p_dex, p_int, p_luk, p_hair, p_face) VALUES(#{name},#{p_name},#{p_str},#{p_dex},#{p_int},#{p_luk},#{p_hair},#{p_face})
 	</insert>
-	
+	<delete id="goodbye" parameterType="String">
+		DELETE FROM alt.players WHERE p_name = #{reqName}
+	</delete>
 	
 	
 	

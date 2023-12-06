@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -118,10 +119,40 @@ public class ClientController {
 	        
 	        
 	    }
-		//
 		
 	}
 	
+	@RequestMapping(value="/goodbye", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
+	public String goodbye(@RequestParam("reqName") String reqName) {
+		try {
+	        return csv.goodbye(reqName);
+	        
+	    } catch (Exception e) {
+	        
+	        e.printStackTrace();
+	        
+	        
+	    }
+		return "n";
+	}
+	
+	@RequestMapping(value="/gameopen", method = {RequestMethod.GET, RequestMethod.POST})
+	public String gameopen(@RequestParam("data") String data, @RequestParam("names") String names , HttpSession session) {
+		try {
+			if(session.getAttribute("loginedId")!=null){
+				session.setAttribute("joinedName", names);
+				return "redirect:/" + data;
+			}
+			
+	    } catch (Exception e) {
+	        
+	        e.printStackTrace();
+	        return "redirect:/index";
+	        
+	    }
+		return "redirect:/index";
+	}
 	
 	
 	

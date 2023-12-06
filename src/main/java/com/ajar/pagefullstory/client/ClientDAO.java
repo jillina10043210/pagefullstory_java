@@ -84,6 +84,13 @@ public class ClientDAO {
 
 
 
+	public String goodbye(String reqName) {
+		int result = sqlSession.delete("mapper.clientMap.goodbye", reqName);
+		return result > 0 ? "q" : "n"; 
+	}
+
+
+
 	
 	
 	

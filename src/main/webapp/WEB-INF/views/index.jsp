@@ -8,20 +8,21 @@
             <title>pagefullstory</title>
             <link href="<c:url value='/resources/css/main.css'/>" rel="stylesheet" type="text/css" />
             <link href="<c:url value='/resources/css/opening.css'/>" rel="stylesheet" type="text/css" />
+            <style>
+            #globalLoad{
+            display:none;}
+            </style>
         </head>
 
         <body>
-            <div id="loginUrl" data-url="<c:url value='/client/login' />"></div>
-            <div id="signinUrl" data-url="<c:url value='/client/signin' />"></div>
-            <div id="signupUrl" data-url="<c:url value='/client/signup' />"></div>
-            <div id="tocharUrl" data-url="<c:url value='/client/tochar' />"></div>
-            <div id="clientUrl" data-url="<c:url value='/client/' />"></div>
-            <div id="hUrl" data-url="${pageContext.request.contextPath}/resources/js/hair.json"></div>
-            <div id="fUrl" data-url="${pageContext.request.contextPath}/resources/js/face.json"></div>
-            <div id="tUrl" data-url="${pageContext.request.contextPath}/resources/js/temp.json"></div>
+        <div id="globalLoad">
+        	<div id="globalLoad_context"></div>
+    	</div>            
+            <div id="clientUrl" data-url="<c:url value='/client/' />"></div>       
+            <div id="gameUrl" data-url="<c:url value='/game/' />"></div>                     
             <div id="cssUrl" data-url="${pageContext.request.contextPath}/resources/css/"></div>
-
-
+			<div id="jsUrl" data-url="${pageContext.request.contextPath}/resources/js/"></div>
+			<div id="rootUrl" data-url="${pageContext.request.contextPath}/"></div>
             <div id="io_back">
                 <div class="io_back_front"></div>
                 <div class="io_back_front"></div>
@@ -112,6 +113,7 @@
             <div id="io_character_loged_icon_0" class="io_character_loged_icon io_character_loged_icon_em"></div>
             <div id="io_character_loged_icon_1" class="io_character_loged_icon io_character_loged_icon_em"></div>
             <div id="io_character_loged_icon_2" class="io_character_loged_icon io_character_loged_icon_em"></div>
+            <div id="io_character_loged_nope"></div>
         </div>
             </div>
             <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -124,7 +126,7 @@
             <script type="module" src="${pageContext.request.contextPath}/resources/js/opening.js"></script>
             <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/hair.json"></script>
             <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/face.json"></script>
-            <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/temp.json"></script>
+            <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/game.json"></script>
 
         </body>
 
