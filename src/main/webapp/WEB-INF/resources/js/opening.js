@@ -221,7 +221,7 @@ function requestSignUp(reqId, reqPwd) {
 
         },
         error: function (errorThrown) {
-            alert(errorThrown);
+            location.reload(true);
         }
 
     });
@@ -235,7 +235,7 @@ function requestSignIn(reqId, reqPwd) {
 
         },
         error: function (errorThrown) {
-            alert(errorThrown);
+            location.reload(true);
         }
 
     });
@@ -250,7 +250,7 @@ function checkLogin(reqId, reqPwd) {
             excuteLogin(result);
         },
         error: function (errorThrown) {
-            alert(errorThrown);
+            location.reload(true);
         }
 
     });

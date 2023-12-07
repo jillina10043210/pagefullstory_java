@@ -15,7 +15,8 @@
 
 <body>
 <div id="clientUrl" data-url="<c:url value='/client/' />"></div>
-<div id="gameUrl" data-url="<c:url value='/game/' />"></div>                        
+<div id="gameUrl" data-url="<c:url value='/game/' />"></div>
+<div id="boardUrl" data-url="<c:url value='/board/' />"></div>                        
 <div id="cssUrl" data-url="${pageContext.request.contextPath}/resources/css/"></div>
 <div id="jsUrl" data-url="${pageContext.request.contextPath}/resources/js/"></div>
 <div id="rootUrl" data-url="${pageContext.request.contextPath}/"></div>
@@ -48,29 +49,33 @@
                 <span id="ir_party_data_l">0</span>
                 <span id="ir_party_data_d">0</span>
             </div>
+            <div id="ir_status_bar">
+                <div id="ir_status_bar_hp_b"></div>
+                <div id="ir_status_bar_hp"></div>
+                <div id="ir_status_bar_exp_b"></div>
+                <div id="ir_status_bar_exp">
+                    
+                </div>
+            </div>
+            <div id="ir_party_newButton"></div>
             <div id="ir_party_done">
 
             </div>
             <div id="ir_party_room_all">
-                <div id="ir_party_room0" class="cr_party_room">
-                    <span class="cr_party_room_title">이름1</span>
-                    <span class="cr_party_room_index">쉬운 승리 부탁드려요</span>
-                </div>
-                <div id="ir_party_room1" class="cr_party_room cr_party_room_em">
-                    <span class="cr_party_room_title"></span>
-                    <span class="cr_party_room_index"></span>
-                </div>
-                <div id="ir_party_room2" class="cr_party_room cr_party_room_em">
-                    <span class="cr_party_room_title"></span>
-                    <span class="cr_party_room_index"></span>
-                </div>
-                <div id="ir_party_room3" class="cr_party_room cr_party_room_em">
-                    <span class="cr_party_room_title"></span>
-                    <span class="cr_party_room_index"></span>
-                </div>
+               
             </div>
         </div>
+    <div id="ir_party_board">
+            <div id="ir_party_board_ch0"></div>
+            <div id="ir_party_board_ch1"></div>
+            <div id="ir_party_board_ch2"></div>
+
+            <input type="text" autocomplete="off" maxlength="17" id="ir_party_board_input" name="ir_party_board_input">
+            <div id="ir_party_board_de" class="ir_party_board_bt"></div>
+            <div id="ir_party_board_in" class="ir_party_board_bt"></div>
+        </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
             <script>
                 $.noConflict();
@@ -79,6 +84,7 @@
 
             <script type="module" src="${pageContext.request.contextPath}/resources/js/main.js"></script>
             <script type="module" src="${pageContext.request.contextPath}/resources/js/rsp.js"></script>
+            <script type="module" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
 </body>
 
 </html>
