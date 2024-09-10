@@ -1,6 +1,6 @@
 package com.ajar.pagefullstory.client;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class ClientVO {
 		private Integer p_id;
@@ -15,7 +15,7 @@ public class ClientVO {
 	    private Integer p_luk;
 	    private BigDecimal p_exp;
 	    private Integer p_balance;
-	    private Date p_createdAt;
+	    private Timestamp p_createdat;
 	    private Integer p_location;
 	    private Integer p_hair;
 	    private Integer p_face;
@@ -109,11 +109,11 @@ public class ClientVO {
 		public void setP_balance(Integer p_balance) {
 			this.p_balance = p_balance;
 		}
-		public Date getP_createdAt() {
-			return p_createdAt;
+		public Timestamp getP_createdat() {
+			return p_createdat;
 		}
-		public void setP_createdAt(Date p_createdAt) {
-			this.p_createdAt = p_createdAt;
+		public void setP_createdat(Timestamp p_createdat) {
+			this.p_createdat = p_createdat;
 		}
 		
 }

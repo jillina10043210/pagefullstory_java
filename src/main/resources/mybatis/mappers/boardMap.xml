@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.boardMap">
+	<select id="getBoard" resultType="boardVO" parameterType="Integer">
+		SELECT * FROM alt.board WHERE  b_type = #{reqN} ORDER BY b_createdat DESC
+	</select>
+	<insert id="updateBoard" parameterType="boardVO">
+		INSERT INTO alt.board (p_name, b_type, b_title) VALUES(#{p_name},#{b_type},#{b_title})
+	</insert>
+</mapper>

@@ -153,7 +153,39 @@ public class ClientController {
 	    }
 		return "redirect:/index";
 	}
-	
+	@RequestMapping(value="/index", method = {RequestMethod.GET, RequestMethod.POST})
+	public String gotoindex(HttpSession session) {
+		try {
+			
+				session.invalidate();
+				return "redirect:/index";
+			
+			
+	    } catch (Exception e) {
+	        
+	        e.printStackTrace();
+	        return "redirect:/index";
+	        
+	    }
+		
+	}
+	@RequestMapping(value = "/room", method = RequestMethod.GET)
+	public String room(Locale locale, Model model, HttpSession session, @RequestParam("num") String num) {
+		try {
+				String tt = "redirect:/room" + num;
+				
+					return tt;
+				
+			
+			
+	    } catch (Exception e) {
+	        
+	        e.printStackTrace();
+	        return "redirect:/index";
+	        
+	    }
+		
+	}
 	
 	
 }
